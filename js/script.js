@@ -97,10 +97,21 @@
         $("body").css("background-color","white");
         $("body").css("color","#000");
         $(".night_mode").removeClass("lights_off");
+        var settings = {};
+        settings.mode = 'night';
+        chrome.storage.sync.set({ 'settings': settings }, function() {
+          // Notify that we saved.
+          console.log("Settings saved");
+        });
         return;
       }
-      $("body").css("background-color","#333");
-      $("body").css("color","#fff");
-      $(".night_mode").addClass("lights_off");
+      settings.mode = 'day';
+      chrome.storage.sync.set({ 'settings': settings }, function() {
+        // Notify that we saved.
+        console.log("Settings saved");
+        $("body").css("background-color","#333");
+        $("body").css("color","#fff");
+        $(".night_mode").addClass("lights_off");
+      });
     });
 })();
