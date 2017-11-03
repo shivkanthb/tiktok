@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
         /*body {
@@ -18,17 +15,58 @@
           padding: 3rem 1.5rem;
           text-align: center;
         }
+        .top_right {
+          position: absolute;
+          top: 10px;
+          right: 25px;
+        }
+        .icon {
+          width: 20px;
+          height: 20px;
+        }
+        .icon:hover {
+          cursor: pointer;
+        }
+        .settings,.night_mode {
+          margin: 0 10px;
+        }
+
+        .lights_off {
+          color: #fff;
+        }
     </style>
   </head>
   <body>
+    <div class="top_right">
+      <span class="settings"><img class="icon" src="img/dots.png" /></span>
+      <span class="night_mode "><img class="icon" src="img/night.png" /></span>
+    </div>
     <div class="container">
       <div class="content">
         <div id="time"></div>
       </div>
     </div>
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="js/jquery.min.js" ></script>
+    <script src="js/tether.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      (function(){
+        console.log("here");
+        $('.night_mode').on("click", function() {
+          if ($(this).hasClass("lights_off")) {
+            $("body").css("background-color","white");
+            $("body").css("color","#000");
+            $(".night_mode").removeClass("lights_off");
+            return;
+          }
+          $("body").css("background-color","#333");
+          $("body").css("color","#fff");
+          $(".night_mode").addClass("lights_off");
+        });
+
+      })();
+    </script>
   </body>
 </html>
