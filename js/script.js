@@ -90,28 +90,54 @@
         }, 500);
     }
 
-    getTimeLeft();
+    function makeBGBlack() {
+        console.log("here");
+         $("body").css("background-color","#333");
+        $("body").css("color","#fff");
+        $(".night_mode").addClass("lights_off");
+    }
 
-    $('.night_mode').on("click", function() {
-      if ($(this).hasClass("lights_off")) {
+    function makeBGWhite() {
         $("body").css("background-color","white");
         $("body").css("color","#000");
         $(".night_mode").removeClass("lights_off");
-        var settings = {};
-        settings.mode = 'night';
+    }
+
+    function setBG() {
+        chrome.storage.sync.get('settings', function(storedObj){
+          if (Object.keys(storedObj).length === 0) {
+            console.log("Using default settings");
+          }
+          console.log(storedObj.settings);
+          if (storedObj.settings) {
+            if (storedObj.settings.mode == 'night') {
+                makeBGBlack();
+            } else {
+                makeBGWhite();
+            }
+          }
+        });
+    }
+
+    getTimeLeft();
+    setBG();
+
+    $('.night_mode').on("click", function() {
+    var settings = {};
+      if ($(this).hasClass("lights_off")) {
+        makeBGWhite();
+        settings.mode = 'day';
         chrome.storage.sync.set({ 'settings': settings }, function() {
           // Notify that we saved.
           console.log("Settings saved");
         });
         return;
       }
-      settings.mode = 'day';
+      settings['mode'] = 'night';
       chrome.storage.sync.set({ 'settings': settings }, function() {
         // Notify that we saved.
         console.log("Settings saved");
-        $("body").css("background-color","#333");
-        $("body").css("color","#fff");
-        $(".night_mode").addClass("lights_off");
+        makeBGBlack();
       });
     });
 })();
