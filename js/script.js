@@ -70,6 +70,7 @@
         }, 500);
     }
     // startTime();
+    var t;
 
     function getTimeLeft(countdownEvent) {
         var dString = countdownEvent.date;
@@ -84,9 +85,10 @@
         var seconds = dateDiff.inSeconds(d2, d1);
 
         document.getElementById('time').innerHTML = `months: ${months} | weeks: ${weeks} | days: ${days} | hours: ${hours} | minutes: ${minutes} | seconds: ${seconds}`;
+        document.getElementById('name').innerHTML = countdownEvent.name;
         t = setTimeout(function () {
             getTimeLeft(countdownEvent);
-        }, 500);
+        }, 1000);
     }
 
     function setCoundownEvent() {
@@ -142,7 +144,7 @@
         });
     }
 
-    saveCountdownEvent("Shipping", '11-15-2017');
+    // saveCountdownEvent("Shipping", '11-15-2017');
     setCoundownEvent();
     // getTimeLeft();
     setBG();
@@ -166,11 +168,17 @@
       });
     });
 
-    $(".form").click(function(){
+    $("#update_event").on("click", function(){
+        console.log("Yopes");
         event.preventDefault();
         console.log("form submitted");
         var event_name = $('#event_name').val();
         var event_date = $('#event_date').val();
         console.log("%s %s", event_name, event_date);
+        $('.close').click();
+        clearTimeout(t);
+        saveCountdownEvent(event_name, event_date);
+        setCoundownEvent();
     });
+
 })();

@@ -119,40 +119,24 @@
           box-shadow: 0 6px 12px rgba(48, 58, 82, 0.2);
       }
 
+      .add-edit-event {
+        -moz-outline:0 none;
+        outline:0 none;
+      }
+
     </style>
   </head>
   <body>
     <div class="top_right">
-      <span class="settings"><a href="#" data-toggle="modal" data-target="#exampleModal"><img class="icon" src="img/dots.png" /></a></span>
+      <span class="settings"><a href="#" class="add-edit-event" data-toggle="modal" data-target="#exampleModal"><img class="icon" src="img/dots.png" /></a></span>
       <span class="night_mode "><img class="icon" src="img/night.png" /></span>
     </div>
     <div class="container">
-      <div class="content">
+      <div class="content" id="content">
         <div id="time"></div>
+        <div id="name"></div>
       </div>
     </div>
-    <script src="js/jquery.min.js" ></script>
-    <script src="js/tether.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
-
-    <form class="dropdown-menu p-4">
-      <div class="form-group">
-        <label for="exampleDropdownFormEmail2">Email address</label>
-        <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
-      </div>
-      <div class="form-group">
-        <label for="exampleDropdownFormPassword2">Password</label>
-        <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
-      </div>
-      <div class="form-check">
-        <label class="form-check-label">
-          <input type="checkbox" class="form-check-input">
-          Remember me
-        </label>
-      </div>
-      <button type="submit" class="btn btn-primary">Sign in</button>
-    </form>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -165,7 +149,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form class="form">
+            <form class="form" action="#">
               <div class="row">
                 <div class="col-md-6 offset-md-3">
                   <input type="text" class="form-control" id="event_name" placeholder="Event name" />
@@ -181,20 +165,16 @@
                   <a href="#" class="btn btn-outline-secondary btn-sm submit" id="update_event">save</a>
                 </div>
               </div>
-              
-            </div>
-                            
-            </form>
-            
+            </div>                  
+          </form>
           
         </div>
-          <!-- <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" align="left" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-light">Save changes</button>
-          </div> -->
         </div>
       </div>
     </div>
-
+    <script src="js/jquery.min.js" ></script>
+    <script src="js/tether.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
