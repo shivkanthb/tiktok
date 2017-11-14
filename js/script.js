@@ -1,5 +1,4 @@
 (function(){
-    console.log("hi");
     var dateDiff = {
         inDays: function(d1, d2) {
             var t2 = d2.getTime();
@@ -90,6 +89,29 @@
         }, 500);
     }
 
+    function setCoundownEvent(event_name, event_date) {
+        var countdownEvent = {};
+        countdownEvent.name = event_name;
+        countdownEvent.date = event_date;
+        chrome.storage.sync.set({ 'countdownEvent': countdownEvent }, function() {
+          // Notify that we saved.
+          console.log("Countdown event saved");
+        });
+
+
+        chrome.storage.sync.get('countdownEvent', function(storedObj){
+          if (Object.keys(storedObj).length === 0) {
+            console.log("Using default new year date as countdown event");
+            getTimeLeft({'name': 'new year 2018', 'date': '01-01-2019'});
+            return;
+          }
+          console.log(storedObj.countdownEvent);
+          if (storedObj.countdownEvent) {
+            getTimeLeft(countdownEvent);
+          }
+        });
+    }
+
     function makeBGBlack() {
         console.log("here");
          $("body").css("background-color","#333");
@@ -119,6 +141,7 @@
         });
     }
 
+    setCoundownEvent("New years", "01-01-2018");
     getTimeLeft();
     setBG();
 
