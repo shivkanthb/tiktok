@@ -34,11 +34,96 @@
         .lights_off {
           color: #fff;
         }
+        .btn-light {
+          font-size: 12px;
+            color: #111;
+            background-color: #f8f9fa;
+            border-color: #f8f9fa;
+        }
+
+        .form-control {
+          font-size: 12px;
+        }
+
+        h5 {
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        #event_name, #event_date {
+          margin: 5px 0;
+        }
+
+        #update_event {
+          color: #777;
+          font-weight: 500;
+          font-size: 11px;
+          letter-spacing: 1px;
+          margin: 10px 0 20px 0;
+        }
+        #update_event:hover {
+          cursor: pointer;
+        }
+
+        input[type=email], input[type=password], input[type=text], select, textarea, .input, #event_name, #event_date {
+            /*width: 256px;*/
+            height: 48px;
+            padding: 5px 8px;
+            /*margin: 10px;*/
+            font-size: 14px;
+            color: #1d1d1f;
+            background-color: #f9fafc;
+            border: 1px solid #eef0f3;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            -webkit-tap-highlight-color: transparent;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            -moz-transition-property: color, background-color, border-color, border-radius;
+            -o-transition-property: color, background-color, border-color, border-radius;
+            -webkit-transition-property: color, background-color, border-color, border-radius;
+            transition-property: color, background-color, border-color, border-radius;
+            -moz-transition-duration: 0.2s;
+            -o-transition-duration: 0.2s;
+            -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+        }
+
+        #update_event {
+          display: block;
+          /*margin: 30px auto 15px auto;*/
+          width: 218px;
+          /*height: 60px;*/
+          padding: 1rem 1rem;
+          text-transform: uppercase;
+          font-size: 11px;
+          cursor: pointer;
+          letter-spacing: 1px;
+          align-items: center;
+          justify-content: center;
+          line-height: 15px;
+          color: #FFF;
+          background-color: lightslategrey;
+          text-align: center;
+          text-decoration: none;
+          box-shadow: 0 3px 6px rgba(48, 58, 82, 0.2);
+          border-radius: 5px;
+          border: 0;
+      }
+
+      #update_event:hover {
+          box-shadow: 0 6px 12px rgba(48, 58, 82, 0.2);
+      }
+
     </style>
   </head>
   <body>
     <div class="top_right">
-      <span class="settings"><a href="dashboard.html"><img class="icon" src="img/dots.png" /></a></span>
+      <span class="settings"><a href="#" data-toggle="modal" data-target="#exampleModal"><img class="icon" src="img/dots.png" /></a></span>
       <span class="night_mode "><img class="icon" src="img/night.png" /></span>
     </div>
     <div class="container">
@@ -50,22 +135,66 @@
     <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
-    <!-- <script>
-      (function(){
-        console.log("here");
-        $('.night_mode').on("click", function() {
-          if ($(this).hasClass("lights_off")) {
-            $("body").css("background-color","white");
-            $("body").css("color","#000");
-            $(".night_mode").removeClass("lights_off");
-            return;
-          }
-          $("body").css("background-color","#333");
-          $("body").css("color","#fff");
-          $(".night_mode").addClass("lights_off");
-        });
 
-      })();
-    </script> -->
+    <form class="dropdown-menu p-4">
+      <div class="form-group">
+        <label for="exampleDropdownFormEmail2">Email address</label>
+        <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+      </div>
+      <div class="form-group">
+        <label for="exampleDropdownFormPassword2">Password</label>
+        <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="checkbox" class="form-check-input">
+          Remember me
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Countdown Event</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="form">
+              <div class="row">
+                <div class="col-md-6 offset-md-3">
+                  <input type="text" class="form-control" id="event_name" placeholder="Event name" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 offset-md-3">
+                  <input type="text" class="form-control" id="event_date" placeholder="mm-dd-yyyy" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 offset-md-3">
+                  <a href="#" class="btn btn-outline-secondary btn-sm submit" id="update_event">save</a>
+                </div>
+              </div>
+              
+            </div>
+                            
+            </form>
+            
+          
+        </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" align="left" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-light">Save changes</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>

@@ -71,8 +71,8 @@
     }
     // startTime();
 
-    function getTimeLeft() {
-        var dString = "Jan, 01, 2018";
+    function getTimeLeft(countdownEvent) {
+        var dString = countdownEvent.date;
         var d1 = new Date(dString);
         var d2 = new Date();
 
@@ -85,20 +85,11 @@
 
         document.getElementById('time').innerHTML = `months: ${months} | weeks: ${weeks} | days: ${days} | hours: ${hours} | minutes: ${minutes} | seconds: ${seconds}`;
         t = setTimeout(function () {
-            getTimeLeft();
+            getTimeLeft(countdownEvent);
         }, 500);
     }
 
-    function setCoundownEvent(event_name, event_date) {
-        var countdownEvent = {};
-        countdownEvent.name = event_name;
-        countdownEvent.date = event_date;
-        chrome.storage.sync.set({ 'countdownEvent': countdownEvent }, function() {
-          // Notify that we saved.
-          console.log("Countdown event saved");
-        });
-
-
+    function setCoundownEvent() {
         chrome.storage.sync.get('countdownEvent', function(storedObj){
           if (Object.keys(storedObj).length === 0) {
             console.log("Using default new year date as countdown event");
@@ -107,8 +98,18 @@
           }
           console.log(storedObj.countdownEvent);
           if (storedObj.countdownEvent) {
-            getTimeLeft(countdownEvent);
+            getTimeLeft(storedObj.countdownEvent);
           }
+        });
+    }
+
+    function saveCountdownEvent(event_name, event_date) {
+        var countdownEvent = {};
+        countdownEvent.name = event_name;
+        countdownEvent.date = event_date;
+        chrome.storage.sync.set({ 'countdownEvent': countdownEvent }, function() {
+          // Notify that we saved.
+          console.log("Countdown event saved");
         });
     }
 
@@ -141,8 +142,9 @@
         });
     }
 
-    setCoundownEvent("New years", "01-01-2018");
-    getTimeLeft();
+    saveCountdownEvent("Shipping", '11-15-2017');
+    setCoundownEvent();
+    // getTimeLeft();
     setBG();
 
     $('.night_mode').on("click", function() {
@@ -162,5 +164,13 @@
         console.log("Settings saved");
         makeBGBlack();
       });
+    });
+
+    $(".form").click(function(){
+        event.preventDefault();
+        console.log("form submitted");
+        var event_name = $('#event_name').val();
+        var event_date = $('#event_date').val();
+        console.log("%s %s", event_name, event_date);
     });
 })();
