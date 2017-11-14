@@ -117,15 +117,19 @@
 
     function makeBGBlack() {
         console.log("here");
-         $("body").css("background-color","#333");
+        $("body").css("background-color","#333");
         $("body").css("color","#fff");
         $(".night_mode").addClass("lights_off");
+        $("img.edit-icon").attr("src","img/edit-white.png");
+        $("img.night-icon").attr("src","img/night-white.png");
     }
 
     function makeBGWhite() {
         $("body").css("background-color","white");
         $("body").css("color","#000");
         $(".night_mode").removeClass("lights_off");
+        $("img.edit-icon").attr("src","img/edit-black.png");
+        $("img.night-icon").attr("src","img/night-black.png");
     }
 
     function setBG() {

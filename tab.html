@@ -24,6 +24,12 @@
           width: 20px;
           height: 20px;
         }
+
+        .edit-icon {
+          width: 15px;
+          height: 15px;
+        }
+
         .icon:hover {
           cursor: pointer;
         }
@@ -48,6 +54,7 @@
         h5 {
           font-size: 14px;
           font-weight: 500;
+          color: #777;
         }
 
         #event_name, #event_date {
@@ -128,8 +135,14 @@
   </head>
   <body>
     <div class="top_right">
-      <span class="settings"><a href="#" class="add-edit-event" data-toggle="modal" data-target="#exampleModal"><img class="icon" src="img/dots.png" /></a></span>
-      <span class="night_mode "><img class="icon" src="img/night.png" /></span>
+      <span class="settings">
+        <a href="#" class="add-edit-event" data-toggle="modal" data-target="#exampleModal">
+          <img class="icon edit-icon" src="img/edit-black.png" />
+        </a>
+      </span>
+      <span class="night_mode ">
+        <img class="icon night-icon" src="img/night-black.png" />
+      </span>
     </div>
     <div class="container">
       <div class="content" id="content">
