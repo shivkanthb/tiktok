@@ -1,4 +1,6 @@
 (function(){
+
+
     var dateDiff = {
         inDays: function(d1, d2) {
             var t2 = d2.getTime();
@@ -100,6 +102,12 @@
         } else {
             line1 = `<div><span class="big">${seconds}</span>s</div`;
         }
+
+        // if the countdown date is passed
+        if (d1 < d2) {
+            document.getElementById('name').innerHTML = "Countdown over 🙅‍";
+            return;
+        }
         document.getElementById('time').innerHTML = `months: ${months} | weeks: ${weeks} | days: ${days} | hours: ${hours} | minutes: ${minutes} | seconds: ${seconds}`;
         document.getElementById('time').innerHTML = line1 + line2;
         document.getElementById('name').innerHTML = countdownEvent.name + " in";
@@ -197,6 +205,12 @@
         var event_date = $('#event_date').val();
         console.log("%s %s", event_name, event_date);
         $('.close').click();
+        if (!event_name) {
+            event_name = `👀 &nbsp;`;
+        }
+        if (!event_date) {
+            return;
+        }
         clearTimeout(t);
         saveCountdownEvent(event_name, event_date);
         setCoundownEvent();
