@@ -204,7 +204,8 @@
         var event_name = $('#event_name').val();
         var event_date = $('#event_date').val();
         console.log("%s %s", event_name, event_date);
-        $('.close').click();
+        // $('.close').click();
+        window.history.back();
         if (!event_name) {
             event_name = `👀 &nbsp;`;
         }
@@ -215,5 +216,6 @@
         saveCountdownEvent(event_name, event_date);
         setCoundownEvent();
     });
+
 
 })();

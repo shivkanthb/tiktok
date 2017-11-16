@@ -1,0 +1,181 @@
+/*******************************************************
+Base Theme
+********************************************************/
+.datetimepicker {
+	position: absolute; font-size: 11px; 
+	/*font-family: Tahoma, sans-serif; */
+	color: #000; line-height: normal; 
+	/*width: 172px; height: 135px;*/ 
+	padding: 7px; background:#fefefe; border:1px solid #ccc; border-radius:2px; margin:2px; box-shadow: 2px 2px 15px #666666;}
+
+/* header
+********************************************************/
+.datetimepicker .header {position: relative; height: 15px; margin-bottom: 5px; padding-top: 1px; width:auto;}
+.datetimepicker .header .title {text-align: center; margin: 0 25px 0 25px;}
+.datetimepicker .header .titleText {}
+.datetimepicker .header .previous, .datetimepicker .header .next{position: absolute; cursor: pointer; overflow: hidden; top: 2px;}
+.datetimepicker .header .previous {left: 2px; border-color: transparent #666 transparent transparent; border-style: solid; border-width: 6px; width: 0; height: 0; line-height: 0; font-size: 0;}
+@media screen and (-webkit-min-device-pixel-ratio:0){ .datetimepicker .header .previous {top: 1px;border-width: 7px;left: 1px;}}
+.datetimepicker .header .previous:hover {border-color: transparent #498CE2 transparent transparent;}
+.datetimepicker .header .next {right: 4px; border-color: transparent transparent transparent #666; border-style: solid; border-width: 6px; width: 0; height: 0; line-height: 0; font-size: 0;}
+.datetimepicker .header .next:hover {border-color: transparent transparent transparent #498CE2;}
+
+/* body
+********************************************************/
+.datetimepicker .body {position: relative; top: 0px; left: 2px; width: 168px; height: 112px; overflow: hidden;}
+
+/* time
+********************************************************/
+.datetimepicker .time {position: relative; width: 100%; height: 100%;}
+.datetimepicker .time .hour, .datetimepicker .time .separator,
+.datetimepicker .time .minutes {border: 1px solid #ccc; background: #fff; width: 50px; font-size: 32px; position: absolute; top: 10px; text-align: center; padding: 2px;}
+.datetimepicker .time.f12 .hour, .datetimepicker .time.f12 .separator, .datetimepicker .time.f12 .minutes {top: 5px;}
+.datetimepicker .time .hour {left: 15px;}
+.datetimepicker .time .separator {background: transparent; border: 0px; width: 10px; left: 76px;}
+.datetimepicker .time .minutes {left: 95px;}
+.datetimepicker .time .ok {position: absolute; top: 65px; width: 136px; left: 15px; font-size: 20px; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -o-border-radius:2px; color:#000000; background: -moz-linear-gradient(top , #E8E8E8, #B1B4AD); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#E8E8E8', endColorstr='#B1B4AD'); background-image: linear-gradient(to bottom,#E8E8E8,#B1B4AD); background: -webkit-gradient(linear,left top,left bottom, from(#E8E8E8), to(#B1B4AD)); background: -o-linear-gradient(top , #E8E8E8, #B1B4AD); border:1px solid #999999;}
+.datetimepicker .time .ok:hover {color:#000000;  background: -moz-linear-gradient(top , #E8E8E8, #A2A59C); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#E8E8E8', endColorstr='#A2A59C'); background-image: linear-gradient(to bottom,#E8E8E8,#A2A59C); background: -webkit-gradient(linear,left top,left bottom, from(#E8E8E8), to(#A2A59C)); background: -o-linear-gradient(top , #E8E8E8, #A2A59C); border-color:#999999;}
+.datetimepicker .time .ok:active {color:#000000; background: -moz-linear-gradient(top , #CACCC8, #95998E); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#CACCC8', endColorstr='#95998E'); background-image: linear-gradient(to bottom,#CACCC8,#95998E); background: -webkit-gradient(linear,left top,left bottom, from(#CACCC8), to(#95998E)); background: -o-linear-gradient(top , #CACCC8, #95998E); border-color:#999999;}
+.datetimepicker .time.f12 .ok {top: 70px;}
+.datetimepicker  .time.f12 .ampm {top:50px; position:absolute; left:73px; font-size:14px;}
+
+/* days-grid
+********************************************************/
+.datetimepicker .days .day {float: left; text-align: center; overflow: hidden; width: 23px; line-height:15px; margin: 0 1px 1px 0;}
+.datetimepicker .days .today {background: #c9dbef; border-radius: 1px;}
+.datetimepicker .days .titles {height: 15px; border-bottom: 1px solid #e0e0e0; margin-bottom: 1px;}
+.datetimepicker .days .week5 .day {margin-bottom: 0;}
+
+/* days-colors
+********************************************************/
+.datetimepicker .days .week .day {cursor: pointer;}
+.datetimepicker .days .week .day:hover {background: #CCC;border-radius: 1px;color:#000;}
+.datetimepicker .days .otherMonth {color: #aaa;}
+.datetimepicker .days .week .otherMonth:hover {background: #EEE;border-radius: 1px;color: #AAA;}
+.datetimepicker .days .selected {background: #498CE2;border-radius: 1px;color:#fff;}
+
+/* months-grid
+********************************************************/
+.datetimepicker .months .month {float: left;cursor: pointer;text-align: center;padding: 6px 0;width: 55px;line-height:15px;overflow: hidden;margin: 0 1px 1px 0;}
+.datetimepicker .months .today {background: #c9dbef;border-radius: 1px;}
+.datetimepicker .months .month3, .datetimepicker .months .month6, 
+.datetimepicker .months .month9, .datetimepicker .months .month12 { margin-right: 0;}
+.datetimepicker .months .month10, .datetimepicker .months .month11, .datetimepicker .months .month12 { margin-bottom: 0; }
+
+/* months-colors
+********************************************************/
+.datetimepicker .months .month:hover {background: #CCC;border-radius: 1px;color:#000;}
+.datetimepicker .months .selected {background: #498CE2;border-radius: 1px;color:#fff;}
+
+/* years-grid
+********************************************************/
+.datetimepicker .years .year {float: left;cursor: pointer;text-align: center;padding: 6px 0;width: 32px;line-height:15px;overflow: hidden;margin: 0 1px 1px 0;}
+.datetimepicker .years .today {background: #c9dbef;border-radius: 1px;}
+.datetimepicker .years .year4, .datetimepicker .years .year9,
+.datetimepicker .years .year14, .datetimepicker .years .year19 {margin-right: 0;}
+.datetimepicker .years .year15, .datetimepicker .years .year16, .datetimepicker .years .year17,
+.datetimepicker .years .year18, .datetimepicker .years .year19 {margin-bottom: 0;}
+
+/* years-colors
+********************************************************/
+.datetimepicker .years .year:hover {background: #CCC; border-radius: 1px; color:#000;}
+.datetimepicker .years .selected {background: #498CE2; border-radius: 1px; color:#fff;}
+
+/* global
+********************************************************/
+.datetimepicker .unavailable {background: none !important; color: #fbb !important; cursor: default !important;}
+
+
+/*******************************************************
+Themes
+********************************************************/
+/* yellow theme */
+.datetimepicker-yellow {border:1px solid #f7b900;}
+.datetimepicker-yellow .days .titles{border-bottom: 1px solid #f7b900;}
+.datetimepicker-yellow .header .previous:hover {border-color: transparent #f7b900 transparent transparent;}
+.datetimepicker-yellow .header .next:hover {border-color: transparent transparent transparent #f7b900;}
+.datetimepicker-yellow .days .today {background: #F7F4A3;}
+.datetimepicker-yellow .days .selected {background: #f7b900;}
+.datetimepicker-yellow .months .today {background: #F7F4A3;}
+.datetimepicker-yellow .months .selected {background: #f7b900;}
+.datetimepicker-yellow .years .today {background: #F7F4A3;}
+.datetimepicker-yellow .years .selected {background: #f7b900;}
+.datetimepicker-yellow .time .ok {border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -o-border-radius:2px; color:#222;background: -moz-linear-gradient(bottom, #DDB000, #FFD11C); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FFD11C', endColorstr='#DDB000'); background-image: linear-gradient(to bottom,#FFD11C,#DDB000); background: -webkit-gradient(linear,left bottom,left top, from(#DDB000), to(#FFD11C)); background: -o-linear-gradient(bottom, #DDB000, #FFD11C); border:1px solid #DDB000;}
+.datetimepicker-yellow .time .ok:hover { color:#222;background: -moz-linear-gradient(bottom, #FDCA00, #FFDC4F); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FFDC4F', endColorstr='#FDCA00'); background-image: linear-gradient(to bottom,#FFDC4F,#FDCA00); background: -webkit-gradient(linear,left bottom,left top, from(#FDCA00), to(#FFDC4F)); background: -o-linear-gradient(bottom, #FDCA00, #FFDC4F); border-color:#DDB000;}
+.datetimepicker-yellow .time .ok:active{ color:#222;background: -moz-linear-gradient(bottom, #FDCA00, #FFD11C); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FFD11C', endColorstr='#FDCA00'); background-image: linear-gradient(to bottom,#FFD11C,#FDCA00); background: -webkit-gradient(linear,left bottom,left top, from(#FDCA00), to(#FFD11C)); background: -o-linear-gradient(bottom, #FDCA00, #FFD11C); border-color:#DDB000;}
+
+
+/* green theme */
+.datetimepicker-green {border:1px solid #279C27;}
+.datetimepicker-green .days .titles{border-bottom: 1px solid #279C27;}
+.datetimepicker-green .header .previous:hover {border-color: transparent #279C27 transparent transparent;}
+.datetimepicker-green .header .next:hover {border-color: transparent transparent transparent #279C27;}
+.datetimepicker-green  .days .today {background: #BBED9A;}
+.datetimepicker-green .days .selected {background: #279C27;}
+.datetimepicker-green  .months .today {background: #BBED9A;}
+.datetimepicker-green .months .selected {background: #279C27;}
+.datetimepicker-green  .years .today {background: #BBED9A;}
+.datetimepicker-green .years .selected {background: #279C27;}
+.datetimepicker-green .time .ok {border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -o-border-radius:2px; color:#ffffff; background: -moz-linear-gradient(bottom, #006600, #009933); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#009933', endColorstr='#006600'); background-image: linear-gradient(to bottom,#009933,#006600); background: -webkit-gradient(linear,left bottom,left top, from(#006600), to(#009933)); background: -o-linear-gradient(bottom, #006600, #009933); border:1px solid #006600; }
+.datetimepicker-green .time .ok:hover {color:#ffffff; background: -moz-linear-gradient(bottom, #009100, #00AE38); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#00AE38', endColorstr='#009100'); background-image: linear-gradient(to bottom,#00AE38,#009100); background: -webkit-gradient(linear,left bottom,left top, from(#009100), to(#00AE38)); background: -o-linear-gradient(bottom, #009100, #00AE38);border-color:#006600;}
+.datetimepicker-green .time .ok:active {color:#ffffff; background: -moz-linear-gradient(bottom, #009100, #009933); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#009933', endColorstr='#009100'); background-image: linear-gradient(to bottom,#009933,#009100); background: -webkit-gradient(linear,left bottom,left top, from(#009100), to(#009933)); background: -o-linear-gradient(bottom, #009100, #009933);border-color:#006600;}
+
+/* blue theme */
+.datetimepicker-blue {border:1px solid #1F6DA8;}
+.datetimepicker-blue .days .titles{border-bottom: 1px solid #1F6DA8;}
+.datetimepicker-blue .header .previous:hover {border-color: transparent #1F6DA8 transparent transparent;}
+.datetimepicker-blue .header .next:hover {border-color: transparent transparent transparent #1F6DA8;}
+.datetimepicker-blue .days .today {background: #c9dbef;}
+.datetimepicker-blue .days .selected {background: #1F6DA8;}
+.datetimepicker-blue .months .today {background: #c9dbef;}
+.datetimepicker-blue .months .selected {background: #1F6DA8;}
+.datetimepicker-blue .years .today {background: #c9dbef;}
+.datetimepicker-blue .years .selected {background: #1F6DA8;}
+.datetimepicker-blue .time .ok {border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -o-border-radius:2px; color:#ffffff; background: -moz-linear-gradient(bottom, #005577, #007EAE); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#007EAE', endColorstr='#005577'); background-image: linear-gradient(to bottom,#007EAE,#005577); background: -webkit-gradient(linear,left bottom,left top, from(#005577), to(#007EAE)); background: -o-linear-gradient(bottom, #005577, #007EAE); border:1px solid #005577;}
+.datetimepicker-blue .time .ok:hover {color:#ffffff;  background: -moz-linear-gradient(bottom, #0077A4, #0094CC); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#0094CC', endColorstr='#0077A4'); background-image: linear-gradient(to bottom,#0094CC,#0077A4); background: -webkit-gradient(linear,left bottom,left top, from(#0077A4), to(#0094CC)); background: -o-linear-gradient(bottom, #0077A4, #0094CC);border-color:#005577;}
+.datetimepicker-blue .time .ok:active {color:#ffffff;  background: -moz-linear-gradient(bottom, #0077A4, #007EAE); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#007EAE', endColorstr='#0077A4'); background-image: linear-gradient(to bottom,#007EAE,#0077A4); background: -webkit-gradient(linear,left bottom,left top, from(#0077A4), to(#007EAE)); background: -o-linear-gradient(bottom, #005577, #007EAE);border-color:#005577;}
+ 
+/* red theme */
+.datetimepicker-red {border:1px solid #E02A2A;}
+.datetimepicker-red .days .titles{border-bottom: 1px solid #E02A2A;}
+.datetimepicker-red .header .previous:hover {border-color: transparent #E02A2A transparent transparent;}
+.datetimepicker-red .header .next:hover {border-color: transparent transparent transparent #E02A2A;}
+.datetimepicker-red .days .today {background: #FCBDBD;}
+.datetimepicker-red .days .selected {background: #E02A2A;}
+.datetimepicker-red .months .today {background: #FCBDBD;}
+.datetimepicker-red .months .selected {background: #E02A2A;}
+.datetimepicker-red .years .today {background: #FCBDBD;}
+.datetimepicker-red .years .selected {background: #E02A2A;}
+.datetimepicker-red .time .ok {border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -o-border-radius:2px; color:#ffffff;  background: -moz-linear-gradient(bottom, #990000, #C40000); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#C40000', endColorstr='#990000'); background-image: linear-gradient(to bottom,#C40000,#990000); background: -webkit-gradient(linear,left bottom,left top, from(#990000), to(#C40000)); background: -o-linear-gradient(bottom, #990000, #C40000); border:1px solid #990000;}
+.datetimepicker-red .time .ok:hover {color:#ffffff; background: -moz-linear-gradient(bottom, #BF0000, #D50000); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#D50000', endColorstr='#BF0000'); background-image: linear-gradient(to bottom,#D50000,#BF0000); background: -webkit-gradient(linear,left bottom,left top, from(#BF0000), to(#D50000)); background: -o-linear-gradient(bottom, #BF0000, #D50000);border-color:#990000;}
+.datetimepicker-red .time .ok:active {color:#ffffff; background: -moz-linear-gradient(bottom, #BF0000, #C40000); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#C40000', endColorstr='#BF0000'); background-image: linear-gradient(to bottom,#C40000,#BF0000); background: -webkit-gradient(linear,left bottom,left top, from(#BF0000), to(#C40000)); background: -o-linear-gradient(bottom, #BF0000, #C40000);border-color:#990000;}
+
+/* orange theme */
+.datetimepicker-orange {border:1px solid #F77701;}
+.datetimepicker-orange .days .titles{border-bottom: 1px solid #F77701;}
+.datetimepicker-orange .header .previous:hover {border-color: transparent #F77701 transparent transparent;}
+.datetimepicker-orange .header .next:hover {border-color: transparent transparent transparent #F77701;}
+.datetimepicker-orange .days .today {background: #fcb16f;}
+.datetimepicker-orange .days .selected {background: #F77701;}
+.datetimepicker-orange .months .today {background: #fcb16f;}
+.datetimepicker-orange .months .selected {background: #F77701;}
+.datetimepicker-orange .years .today {background: #fcb16f;}
+.datetimepicker-orange .years .selected {background: #F77701;}
+.datetimepicker-orange .time .ok {border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -o-border-radius:2px; color:#ffffff;  background: -moz-linear-gradient(bottom, #D65203, #FF8000); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FF8000', endColorstr='#D65203'); background-image: linear-gradient(to bottom,#FF8000,#D65203); background: -webkit-gradient(linear,left bottom,left top, from(#D65203), to(#FF8000)); background: -o-linear-gradient(bottom, #D65203, #FF8000); border:1px solid #D65203;}
+.datetimepicker-orange .time .ok:hover {color:#ffffff;  background: -moz-linear-gradient(bottom, #FC6A12, #FF972F); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FF972F', endColorstr='#FC6A12'); background-image: linear-gradient(to bottom,#FF972F,#FC6A12); background: -webkit-gradient(linear,left bottom,left top, from(#FC6A12), to(#FF972F)); background: -o-linear-gradient(bottom, #FC6A12, #FF972F); border-color:#D65203;}
+.datetimepicker-orange .time .ok:active{color:#ffffff;  background: -moz-linear-gradient(bottom, #FC6A12, #FF8000); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FF8000', endColorstr='#FC6A12'); background-image: linear-gradient(to bottom,#FF8000,#FC6A12); background: -webkit-gradient(linear,left bottom,left top, from(#FC6A12), to(#FF8000)); background: -o-linear-gradient(bottom, #FC6A12, #FF8000); border-color:#D65203;}
+
+/* purple theme */
+.datetimepicker-purple {border:1px solid #621779;}
+.datetimepicker-purple .days .titles{border-bottom: 1px solid #621779;}
+.datetimepicker-purple .header .previous:hover {border-color: transparent #621779 transparent transparent;}
+.datetimepicker-purple .header .next:hover {border-color: transparent transparent transparent #621779;}
+.datetimepicker-purple .days .today {background: #E3C2EC;}
+.datetimepicker-purple .days .selected {background: #621779;}
+.datetimepicker-purple .months .today {background: #E3C2EC;}
+.datetimepicker-purple .months .selected {background: #621779;}
+.datetimepicker-purple .years .today {background: #E3C2EC;}
+.datetimepicker-purple .years .selected {background: #621779;}
+.datetimepicker-purple .time .ok {border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; -o-border-radius:2px; color:#ffffff;  background: -moz-linear-gradient(bottom, #590059, #6F37A6); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#6F37A6', endColorstr='#590059'); background-image: linear-gradient(to bottom,#6F37A6,#590059); background: -webkit-gradient(linear,left bottom,left top, from(#590059), to(#6F37A6)); background: -o-linear-gradient(bottom, #590059, #6F37A6); border:1px solid #590059;}
+.datetimepicker-purple .time .ok:hover {color:#ffffff;  background: -moz-linear-gradient(bottom, #6A048C, #8345C0); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#8345C0', endColorstr='#6A048C'); background-image: linear-gradient(to bottom,#8345C0,#6A048C); background: -webkit-gradient(linear,left bottom,left top, from(#6A048C), to(#8345C0)); background: -o-linear-gradient(bottom, #6A048C, #8345C0); border-color:#590059;}
+.datetimepicker-purple .time .ok:active {color:#ffffff;  background: -moz-linear-gradient(bottom, #6A048C, #6F37A6); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#6F37A6', endColorstr='#6A048C'); background-image: linear-gradient(to bottom,#6F37A6,#6A048C); background: -webkit-gradient(linear,left bottom,left top, from(#6A048C), to(#6F37A6)); background: -o-linear-gradient(bottom, #6A048C, #6F37A6); border-color:#590059;}
