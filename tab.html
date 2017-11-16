@@ -19,6 +19,7 @@
           position: absolute;
           top: 10px;
           right: 25px;
+          z-index: 10000;
         }
         .icon {
           width: 20px;
@@ -131,6 +132,11 @@
         outline:0 none;
       }
 
+      .add-edit-event:hover {
+        cursor: pointer;
+      }
+
+
       .big {
         font-size: 96px;
       }
@@ -144,7 +150,7 @@
   <body>
     <div class="top_right">
       <span class="settings">
-        <a href="add.html" class="add-edit-event" data-toggle="modal1" data-target="#exampleModal1">
+        <a href="add.html" class="add-edit-event">
           <img class="icon edit-icon" src="img/edit-black.png" />
         </a>
       </span>
