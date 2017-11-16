@@ -84,8 +84,24 @@
         var minutes = dateDiff.inMinutes(d2, d1);
         var seconds = dateDiff.inSeconds(d2, d1);
 
+        let line1 = '';
+        let line2 = ''; 
+        let spaces=`&nbsp;&nbsp;&nbsp;`;
+
+        if (days > 1) {
+            line1 = `<div><span class="big">${days}</span>d</div>`;
+            line2 = `<div><span>${hours}</span>h${spaces}<span>${minutes}</span>m${spaces}<span>${seconds}</span>s</div>`;
+        } else if (hours > 1) {
+            line1 = `<div><span class="big">${hours}</span>h</div>`;
+            line2 = `<div><span>${minutes}</span>m${spaces}<span>${seconds}</span>s</div>`;
+        } else if (minutes > 1) {
+            line1 = `<div><span class="big">${minutes}</span>m</div>`;
+            line2 = `<div><span>${seconds}</span>s</div>`;
+        } else {
+            line1 = `<div><span class="big">${seconds}</span>s</div`;
+        }
         document.getElementById('time').innerHTML = `months: ${months} | weeks: ${weeks} | days: ${days} | hours: ${hours} | minutes: ${minutes} | seconds: ${seconds}`;
-        document.getElementById('time').innerHTML = `<span class="big">${hours}</span>h`;
+        document.getElementById('time').innerHTML = line1 + line2;
         document.getElementById('name').innerHTML = countdownEvent.name + " in";
         t = setTimeout(function () {
             getTimeLeft(countdownEvent);
