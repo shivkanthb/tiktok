@@ -85,7 +85,8 @@
         var seconds = dateDiff.inSeconds(d2, d1);
 
         document.getElementById('time').innerHTML = `months: ${months} | weeks: ${weeks} | days: ${days} | hours: ${hours} | minutes: ${minutes} | seconds: ${seconds}`;
-        document.getElementById('name').innerHTML = countdownEvent.name;
+        document.getElementById('time').innerHTML = `<span class="big">${hours}</span>h`;
+        document.getElementById('name').innerHTML = countdownEvent.name + " in";
         t = setTimeout(function () {
             getTimeLeft(countdownEvent);
         }, 1000);
@@ -95,7 +96,7 @@
         chrome.storage.sync.get('countdownEvent', function(storedObj){
           if (Object.keys(storedObj).length === 0) {
             console.log("Using default new year date as countdown event");
-            getTimeLeft({'name': 'new year 2018', 'date': '01-01-2019'});
+            getTimeLeft({'name': 'new year 2018', 'date': '01-01-2018'});
             return;
           }
           console.log(storedObj.countdownEvent);
