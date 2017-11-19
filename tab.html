@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
-        /*body {
-          padding-top: 20rem;
-        }*/
+
         .container {
-          padding-top: 15rem;
+          /*padding-top: 10rem;*/
+          padding: 10rem;
         }
         .content {
           padding: 3rem 1.5rem;
           text-align: center;
+          letter-spacing: 0.5px;
         }
         .top_right {
           position: absolute;
@@ -72,6 +72,7 @@
         #update_event:hover {
           cursor: pointer;
         }
+
 
         input[type=email], input[type=password], input[type=text], select, textarea, .input, #event_name, #event_date {
             /*width: 256px;*/
@@ -165,40 +166,6 @@
       </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Countdown Event</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form class="form" action="#">
-              <div class="row">
-                <div class="col-md-6 offset-md-3">
-                  <input type="text" class="form-control" id="event_name" placeholder="Event name" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 offset-md-3">
-                  <input type="text" class="form-control" id="event_date" placeholder="mm-dd-yyyy" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 offset-md-3">
-                  <a href="#" class="btn btn-outline-secondary btn-sm submit" id="update_event">save</a>
-                </div>
-              </div>
-            </div>                 
-          </form>
-          
-        </div>
-        </div>
-      </div>
-    </div>
     <script src="js/jquery.min.js" ></script>
     <script src="js/tether.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

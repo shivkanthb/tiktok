@@ -10,7 +10,7 @@
           padding-top: 20rem;
         }*/
         .container {
-          padding-top: 15rem;
+          padding-top: 10rem;
         }
 
         .content {
@@ -36,7 +36,7 @@
         .icon:hover {
           cursor: pointer;
         }
-        .settings,.night_mode {
+        .go-back,.settings,.night_mode {
           margin: 0 10px;
         }
 
@@ -120,7 +120,7 @@
           justify-content: center;
           line-height: 15px;
           color: #FFF;
-          background-color: lightslategrey;
+          background-color: #000;
           text-align: center;
           text-decoration: none;
           box-shadow: 0 3px 6px rgba(48, 58, 82, 0.2);
@@ -199,11 +199,11 @@
         -webkit-border-radius: 2px;
         -o-border-radius: 2px;
         color: #000000;
-        background: -moz-linear-gradient(top , #E8E8E8, #B1B4AD);
+        /*background: -moz-linear-gradient(top , #E8E8E8, #B1B4AD);
         filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#E8E8E8', endColorstr='#B1B4AD');
         background-image: linear-gradient(to bottom,#E8E8E8,#B1B4AD);
         background: -webkit-gradient(linear,left top,left bottom, from(#E8E8E8), to(#B1B4AD));
-        background: -o-linear-gradient(top , #E8E8E8, #B1B4AD);
+        background: -o-linear-gradient(top , #E8E8E8, #B1B4AD);*/
         border: 1px solid #999999;
         padding: 0.75rem 0.75rem;
         text-transform: uppercase;
@@ -214,7 +214,7 @@
         justify-content: center;
         line-height: 15px;
         color: #FFF;
-        background-color: lightslategrey;
+        background-color: #333;
         text-align: center;
         text-decoration: none;
         box-shadow: 0 3px 6px rgba(48, 58, 82, 0.2);
@@ -231,9 +231,9 @@
   </head>
   <body>
     <div class="top_right">
-      <span class="settings">
+      <span class="go-back">
         <a href="#" class="add-edit-event" data-toggle="modal" data-target="#exampleModal">
-          <img class="icon edit-icon" src="img/edit-black.png" />
+          <img class="icon back-icon" src="img/back-black.png" />
         </a>
       </span>
       <span class="night_mode ">
@@ -264,41 +264,6 @@
                 </div>
               </div>                
           </form>
-      </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Countdown Event</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form class="form" action="#">
-              <div class="row">
-                <div class="col-md-6 offset-md-3">
-                  <input type="text" class="form-control" id="event_name" placeholder="Event name" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 offset-md-3">
-                  <input type="text" class="form-control" id="event_date" placeholder="mm-dd-yyyy" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 offset-md-3">
-                  <a href="#" class="btn btn-outline-secondary btn-sm submit" id="update_event">save</a>
-                </div>
-              </div>
-            </div>                  
-          </form>
-          
-        </div>
-        </div>
       </div>
     </div>
     <script src="js/jquery.min.js" ></script>
