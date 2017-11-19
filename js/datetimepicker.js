@@ -535,6 +535,11 @@ function DateTimePicker(id,opt){
                 tt.innerHTML = this.format(this.d, 'j M, Y');
             }
 
+            var instr = document.createElement('p');
+            instr.innerHTML = `Use &uarr; & &darr; arrow keys`;
+            instr.className = 'instr';
+            container.appendChild(instr);
+
             var hour = document.createElement('input');                  
 			hour.value = this.format(this.d,(fmt12 ? 'h':'H'));
 			hour.formatValue = this.d.getHours();

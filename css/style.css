@@ -159,7 +159,7 @@ span {
   height: 30px;
   font-size: 14px;
   position: absolute;
-  top: 10px;
+  top: 25px;
   text-align: center;
   padding: 2px;
   color: #1d1d1f;
@@ -191,10 +191,15 @@ span {
     left: 76px;
 }
 
+p.instr {
+  text-align: center;
+  font-weight: 500;
+}
+
 .datetimepicker .time .ok {
   position: absolute;
-  top: 55px;
-  width: 136px;
+  top: 65px;
+  width: 130px;
   left: 15px;
   font-size: 20px;
   border-radius: 2px;
@@ -202,11 +207,11 @@ span {
   -webkit-border-radius: 2px;
   -o-border-radius: 2px;
   color: #000000;
-  /*background: -moz-linear-gradient(top , #E8E8E8, #B1B4AD);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#E8E8E8', endColorstr='#B1B4AD');
-  background-image: linear-gradient(to bottom,#E8E8E8,#B1B4AD);
-  background: -webkit-gradient(linear,left top,left bottom, from(#E8E8E8), to(#B1B4AD));
-  background: -o-linear-gradient(top , #E8E8E8, #B1B4AD);*/
+  background: -moz-linear-gradient(top , #333, #333);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#333', endColorstr='#333');
+  background-image: linear-gradient(to bottom,#333,#333);
+  background: -webkit-gradient(linear,left top,left bottom, from(#333), to(#333));
+  background: -o-linear-gradient(top , #333, #333);
   border: 1px solid #999999;
   padding: 0.75rem 0.75rem;
   text-transform: uppercase;
@@ -227,5 +232,10 @@ span {
 
 .datetimepicker .time .ok:hover {
   color: #FFF;
-  box-shadow: 0 6px 12px rgba(48, 58, 82, 0.2);
+  background: -moz-linear-gradient(top , #333, #000);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#333', endColorstr='#000');
+  background-image: linear-gradient(to bottom,#333,#000);
+  background: -webkit-gradient(linear,left top,left bottom, from(#333), to(#000));
+  background: -o-linear-gradient(top , #333, #000);
+  box-shadow: 3 6px 12px rgba(48, 58, 82, 0.0);
 }
