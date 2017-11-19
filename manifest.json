@@ -1,7 +1,7 @@
 {
   "name": "Tik Tok",
   "short_name": "tiktok",
-  "version": "0.0.0.1",
+  "version": "0.0.0.2",
   "description": "A countdown for productivity boost",
   "icons": { "16": "icons/tiktok_16.png",
              "48": "icons/tiktok_48.png",
@@ -9,7 +9,7 @@
            },
   "manifest_version": 2,
   "chrome_url_overrides": {
-    "newtab": "tab.html"
+    "newtab": "index.html"
   },
   "permissions": [
         "storage"

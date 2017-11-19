@@ -1,7 +1,3 @@
-# TikTok
-tiktok chrome extension
+### TikTok - Chrome New Tab Extension
+A countdown for tasks/events/whatever. 
 
-todos
-- persist night mode
-- persist custom countdowns
-- design around prominent datapoint 
