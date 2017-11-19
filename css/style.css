@@ -1,0 +1,231 @@
+ .container {
+  padding: 10rem;
+}
+
+.content {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.top_right {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  z-index: 10000;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.edit-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+.go-back,.settings,.night_mode {
+  margin: 0 10px;
+}
+
+.lights_off {
+  color: #fff;
+}
+.btn-light {
+  font-size: 12px;
+    color: #111;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.form-control {
+  font-size: 12px;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+#name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#event_name, #event_date {
+  margin: 5px 0;
+}
+
+#update_event {
+  color: #777;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin: 10px 0 20px 0;
+}
+#update_event:hover {
+  cursor: pointer;
+}
+
+input[type=email], input[type=password], input[type=text], select, textarea, .input, #event_name, #event_date {
+    width: 218px;
+    height: 48px;
+    padding: 5px 8px;
+    /*margin: 10px;*/
+    font-size: 14px;
+    color: #1d1d1f;
+    background-color: #f9fafc;
+    border: 1px solid #eef0f3;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-tap-highlight-color: transparent;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -moz-transition-property: color, background-color, border-color, border-radius;
+    -o-transition-property: color, background-color, border-color, border-radius;
+    -webkit-transition-property: color, background-color, border-color, border-radius;
+    transition-property: color, background-color, border-color, border-radius;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 500;
+}
+
+#update_event {
+  display: block;
+  margin: 30px auto 15px auto;
+  width: 218px;
+  /*height: 60px;*/
+  padding: 1rem 1rem;
+  text-transform: uppercase;
+  font-size: 11px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  align-items: center;
+  justify-content: center;
+  line-height: 15px;
+  color: #FFF;
+  background-color: #000;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(48, 58, 82, 0.2);
+  border-radius: 5px;
+  border: 0;
+}
+
+#update_event:hover {
+    box-shadow: 0 6px 12px rgba(48, 58, 82, 0.2);
+}
+
+.add-edit-event {
+  -moz-outline:0 none;
+  outline:0 none;
+}
+
+.add-edit-event:hover {
+  cursor: pointer;
+}
+
+.big {
+  font-size: 96px;
+}
+
+span {
+  font-weight: 500;
+}
+
+.datetimepicker {
+  position: absolute; font-size: 11px; 
+  font-family: inherit; 
+  color: #000; line-height: normal; 
+  width: inherit; height: inherit; 
+  padding: 7px; background:#fefefe; border:1px solid #ccc; border-radius:5px; margin:2px; box-shadow: 2px 2px 15px #666666;
+}
+
+.datetimepicker .time .hour, .datetimepicker .time .separator, .datetimepicker .time .minutes {
+  border: 1px solid #ccc;
+  background: #fff;
+  width: 50px;
+  height: 30px;
+  font-size: 14px;
+  position: absolute;
+  top: 10px;
+  text-align: center;
+  padding: 2px;
+  color: #1d1d1f;
+  background-color: #f9fafc;
+  border: 1px solid #eef0f3;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-transition-property: color, background-color, border-color, border-radius;
+  -o-transition-property: color, background-color, border-color, border-radius;
+  -webkit-transition-property: color, background-color, border-color, border-radius;
+  transition-property: color, background-color, border-color, border-radius;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+
+}
+.datetimepicker .time .separator {
+    background: transparent;
+    border: 0px;
+    width: 10px;
+    left: 76px;
+}
+
+.datetimepicker .time .ok {
+  position: absolute;
+  top: 55px;
+  width: 136px;
+  left: 15px;
+  font-size: 20px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  color: #000000;
+  /*background: -moz-linear-gradient(top , #E8E8E8, #B1B4AD);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#E8E8E8', endColorstr='#B1B4AD');
+  background-image: linear-gradient(to bottom,#E8E8E8,#B1B4AD);
+  background: -webkit-gradient(linear,left top,left bottom, from(#E8E8E8), to(#B1B4AD));
+  background: -o-linear-gradient(top , #E8E8E8, #B1B4AD);*/
+  border: 1px solid #999999;
+  padding: 0.75rem 0.75rem;
+  text-transform: uppercase;
+  font-size: 20px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  align-items: center;
+  justify-content: center;
+  line-height: 15px;
+  color: #FFF;
+  background-color: #333;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 3px 6px rgba(48, 58, 82, 0.2);
+  border-radius: 5px;
+  border: 0;
+}
+
+.datetimepicker .time .ok:hover {
+  color: #FFF;
+  box-shadow: 0 6px 12px rgba(48, 58, 82, 0.2);
+}

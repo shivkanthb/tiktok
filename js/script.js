@@ -175,11 +175,14 @@
         });
     }
 
-    // saveCountdownEvent("Shipping", '11-15-2017');
-    setCoundownEvent();
-    // getTimeLeft();
-    setBG();
+    function init() {
+        // saveCountdownEvent("Shipping", '11-15-2017');
+        setCoundownEvent();
+        // getTimeLeft();
+        setBG();
+    }
 
+    
     $('.night_mode').on("click", function() {
     var settings = {};
       if ($(this).hasClass("lights_off")) {
@@ -223,5 +226,5 @@
         setCoundownEvent();
     });
 
-
+    init();
 })();
