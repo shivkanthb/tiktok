@@ -27,6 +27,7 @@ body {
 	padding-bottom: 40px;
 	text-align: center;
 	position: relative;
+	letter-spacing: 0.2px;
 }
 
 #screen {
@@ -51,7 +52,7 @@ h1 {
 
 h2 {
 	font-size: 16px;
-	font-weight: 300;
+	font-weight: 500;
 	color: #7f7f85; 
 	margin-top: 10px;
 }
