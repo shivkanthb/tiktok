@@ -1,1 +1,41 @@
-My Page
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="/img/icon128.png">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="verifyownership" content="5244279f1e9e5234fe3e4729880046cf"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>TikTok</title>
+  
+</head>
+
+<body>
+
+  <section id="wrapper">
+    <header id="header">
+      <img src="img/icon128.png" style="height:70px;"/>
+      <h1>TikTok</h1>
+      <h2>A customizable countdown that lives in your browser</h2>
+    </header>
+    <!--button onclick="chrome.webstore.install()" id="install-button"><i class="fa fa-chrome" aria-hidden="true"></i> Add to Chrome</button-->
+
+    <a href="https://chrome.google.com/webstore/detail/cryptotab-by-99bitcoins/hclmmnnilijgdckihbjbeogomkaegfjo" target="_blank" onclick="chrome.webstore.install()" id="install-button" class="chrome"><i class="fa fa-chrome" aria-hidden="true"></i> Add to Chrome</a>
+
+    <div style="width:100%;height:0;padding-bottom:75%;position:relative;"><iframe src="https://giphy.com/embed/l2Je83jyYRQJMtVpm" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/gWGLFAq996lwI">via GIPHY</a></p>
+    <footer>
+    <p><a href="http://bit.ly/2xCkLLu" target="_blank">Shiv</a> •  <a href="http://bit.ly/2f9S1lN" target="_blank">Jordan</a></p>
+    </footer>
+  </section>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+  if (chrome.app.isInstalled) {
+    document.getElementById('install-button').style.display = 'none';
+  }
+  </script>
+
+</body>
+</html>

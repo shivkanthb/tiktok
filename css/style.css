@@ -1,0 +1,131 @@
+/* Reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0} 
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	color: #777;
+}
+
+#wrapper {
+	padding: 0 40px 100px;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+#header {
+	margin-top: 50px;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 40px;
+	padding-bottom: 40px;
+	text-align: center;
+	position: relative;
+}
+
+#screen {
+	display: inline-block;
+	width: 320px;
+	margin-bottom: 20px;
+}
+
+
+a {
+	text-decoration: none;
+	color: #7f7f85;
+	font-weight: 400;
+}
+
+h1 {
+	margin: 20px 0;
+	font-weight: 500;
+	font-size: 20px;
+	color: #222;
+}
+
+h2 {
+	font-size: 16px;
+	font-weight: 300;
+	color: #7f7f85; 
+	margin-top: 10px;
+}
+
+p {
+	line-height: 1.8;
+	 /*margin-bottom: 30px;*/
+	 font-size: 16px;
+	 text-align: center;
+}
+
+.add-to-chrome {
+  background-color: #3498db;
+  padding: 8px;
+  color: #FFF;
+  border-radius: 0.25em;
+  position: relative;
+  left: 60%;
+  border: 0px;
+  font-weight: bold;
+}
+
+.add-to-chrome:hover {
+  cursor: pointer;
+}
+
+a.chrome, button{
+	font-weight: 500;
+    display: block;
+    margin: 30px auto 15px auto;
+    width: 214px;
+    /* height: 60px; */
+    padding: 1.25rem 1rem;
+    /*text-transform: uppercase;*/
+    /*font-size: 0.8rem;*/
+    cursor: pointer;
+    letter-spacing: 1px;
+    align-items: center;
+    justify-content: center;
+    line-height: 15px;
+    color: #FFF;
+    /*background-color: #10DDC2;*/
+    background-color: #333;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 3px 6px rgba(48, 58, 82, 0.2);
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+button {
+	border: 0px;
+	font-size: 16px;
+}
+
+a.chrome:hover, button:hover {
+	box-shadow: 0 6px 12px rgba(48, 58, 82, 0.2);
+}
+
+div.poll {
+    padding: 10px 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+
+
+@media screen and (max-width: 540px) {
+	#wrapper { padding:40px; }
+	#header { margin-bottom: 40px; }
+	#docs { display: none; }
+}
+
+@media screen and (max-width:440px) {
+	#wrapper { padding:20px; }
+	#header { margin-bottom: 20px; }
+}
